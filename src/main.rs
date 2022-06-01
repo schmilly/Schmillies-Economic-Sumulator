@@ -1,7 +1,13 @@
+use std::io;
+
 fn main() {
     
+    let mut data_01 = String::new(); // make a mutable string variable
     startscreen();
-    println!("Welcome to schmillies economics Simulator! Press any key to countinue!");
+    println!("Welcome to schmillies economics Simulator! Press enter to countinue!");
+    io::stdin().read_line(&mut data_01); //to get input from the RustcEncodable
+    clearscreen();
+    println!("Program ran succesfully!"); 
 }
 
 
@@ -21,7 +27,7 @@ fn startscreen() {
     println!("  ..    ..-''    ;       ''. '");
     println!("Ask art stolen from the Ascii Art archive")
 }
-//very useful, clears screen and moves variable back to location of 1;1, great for our purposes
+//very useful, clears screen and moves cursos back to location of 1;1, great for our purposes
 fn clearscreen(){ 
     print!("\x1B[2J\x1B[1;1H");
 }
