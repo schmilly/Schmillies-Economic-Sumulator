@@ -5,9 +5,20 @@ fn main() {
     let mut data_01 = String::new(); // make a mutable string variable
     startscreen();
     println!("Welcome to schmillies economics Simulator! Press enter to countinue!");
-    io::stdin().read_line(&mut data_01); //to get input from the RustcEncodable
-    clearscreen();
-    println!("Program ran succesfully!"); 
+    println!("Please press number of options [1]~Start New Game [2]~Countinue Game [3]~Run Economics Calculations"); 
+    io::stdin()
+        .read_line(&mut data_01)
+        .expect("Failed to read Line");
+    println!("You inputted: {}", data_01);
+    match 
+    
+    //clearscreen();
+}
+
+
+
+fn Game(){
+    println!("Yet to be implimented! Please come back later :)")
 }
 
 
